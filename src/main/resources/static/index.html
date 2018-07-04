@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- 开发环境版本，包含了用帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--<script type="text/javascript" src='static/js/vue.js'></script>-->
+    <!--<script type="text/javascript" src='static/js/app.js'></script>-->
+
+</head>
+<body>
+<div id="app">
+    {{ message }}
+</div>
+<div id="test">
+    {{ message }}
+</div>
+
+<!-- 使用的js需要等在对象加载之后再使用 -->
+<script type="text/javascript">
+    var test = new Vue({
+        el: '#test',
+        data: {
+            message: 'hahaha!!'
+        }
+
+    })
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+
+</script>
+</body>
+</html>
